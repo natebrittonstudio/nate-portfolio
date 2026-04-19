@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Nate Britton</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+<header>
+  <h1>Nate Britton</h1>
+  <nav>
+    <a href="#work">Work</a>
+    <a href="#about">About</a>
+    <a href="#contact">Contact</a>
+  </nav>
+</header>
+
+<section class="hero">
+  <video autoplay muted loop playsinline>
+    <source src="media/hero.mp4" type="video/mp4">
+  </video>
+</section>
+
+<section id="work" class="work">
+  <h2>Selected Work</h2>
+
+  <div class="grid">
+    <div class="project">
+      <img src="media/project1.jpg" alt="">
+      <h3>Project Title</h3>
+    </div>
+
+    <div class="project">
+      <img src="media/project2.jpg" alt="">
+      <h3>Project Title</h3>
+    </div>
+  </div>
+</section>
+
+<section id="about">
+  <h2>About</h2>
+  <p>
+    Projection designer and digital artist exploring light, immersion, and speculative environments.
+  </p>
+</section>
+
+<section id="contact">
+  <h2>Contact</h2>
+  <p>Email: your@email.com</p>
+</section>
+
+<footer>
+  <p>© 2026 Nate Britton</p>
+</footer>
+
+</body>
+</html>
+styles.css
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Helvetica, Arial, sans-serif;
+}
+
+body {
+  background: #000;
+  color: #fff;
+}
+
+/* Header */
+header {
+  position: fixed;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+  background: rgba(0,0,0,0.6);
+  backdrop-filter: blur(10px);
+  z-index: 10;
+}
+
+nav a {
+  margin-left: 20px;
+  text-decoration: none;
+  color: white;
+}
+
+/* Hero Video */
+.hero {
+  height: 100vh;
+  overflow: hidden;
+}
+
+.hero video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Work Section */
+.work {
+  padding: 100px 40px;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+}
+
+.project img {
+  width: 100%;
+  display: block;
+}
+
+.project h3 {
+  margin-top: 10px;
+}
+
+/* Sections */
+section {
+  padding: 80px 40px;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 40px;
+  font-size: 14px;
+  opacity: 0.6;
+}
+How to put this on GitHub Pages
+Create a repo (name it: portfolio or natebritton.com)
+Upload files
+Go to Settings → Pages
+Set:
+Source: main branch
+Folder: /root
+
+Your site will be live at:
+
+https://yourusername.github.io/repo-name/
+What this gives you (immediately)
+Fullscreen video landing (important for your work)
+Clean grid portfolio
+Fast + minimal
+No Wix limitations
+What I need from you to go further
+
+If you want this to actually replace your Wix site properly, send me:
+
+Your current Wix URL
+What pages you have (Projects, CV, etc.)
+Whether you want:
+click-into project pages
+Vimeo embeds
+interactive / animated elements
+dark experimental layout vs clean professional
+
+Then I’ll:
+
+rebuild your exact site structure
+make it feel more like your installation work
+optionally convert it into a React/Next.js site
+
+Right now this is a solid foundation—but your work deserves something more spatial and immersive, and we can absolutely push it there.
+
+Ads do not influence the answers you get from ChatGPT. Your chats stay private. 
+Learn about ads and personalization
+can i send you the link to my website and you code that?
+
+Yes—send the link.
+
+Once I have it, I’ll:
+
+break down the structure (pages, layout, media)
+rebuild it in clean HTML/CSS (or React if you want)
+match the visual feel, but also improve anything that’s clunky from Wix
+optimize it for fast loading (especially important for your video work)
+
+If there’s anything you don’t want carried over (or anything you wish Wix let you do but couldn’t), say that too—I’ll factor it into the rebuild.
+
+natebritton.wixsite.com/media
+
+Alright—here’s the honest situation:
+
+Your Wix link (natebritton.wixsite.com/media) didn’t return usable structure through scraping (Wix often blocks that), so I can’t perfectly “clone” it line-for-line yet.
+
+But that’s not actually a bad thing—because rebuilding it exactly as-is would just recreate Wix limitations in code. What you want is a clean version of the same idea, but sharper, faster, and more aligned with your work.
+
+What I can do right now
+
+Based on typical Wix “media” pages + your practice (projection, video, installation), I’m going to rebuild a proper media page that likely matches your intent:
+
+fullscreen video / embedded media
+scroll-based viewing
+minimal text
+emphasis on atmosphere over UI
+MEDIA PAGE (drop into media.html)
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Media — Nate Britton</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+<header>
+  <h1><a href="index.html">Nate Britton</a></h1>
+</header>
+
+<section class="media-container">
+
+  <!-- VIDEO BLOCK -->
+  <div class="media-block">
+    <video controls>
+      <source src="media/video1.mp4" type="video/mp4">
+    </video>
+  </div>
+
+  <!-- VIMEO EMBED -->
+  <div class="media-block">
+    <iframe src="https://player.vimeo.com/video/XXXXXXXX"
+      frameborder="0"
+      allow="autoplay; fullscreen"
+      allowfullscreen>
+    </iframe>
+  </div>
+
+  <!-- IMAGE -->
+  <div class="media-block">
+    <img src="media/image1.jpg" alt="">
+  </div>
+
+  <!-- LOOPING SILENT VIDEO (more installation-like) -->
+  <div class="media-block">
+    <video autoplay muted loop playsinline>
+      <source src="media/loop1.mp4" type="video/mp4">
+    </video>
+  </div>
+
+</section>
+
+</body>
+</html>
+Add this to your styles.css
+/* MEDIA PAGE */
+
+.media-container {
+  width: 100%;
+}
+
+.media-block {
+  width: 100%;
+  margin-bottom: 40px;
+}
+
+.media-block video,
+.media-block iframe,
+.media-block img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Vimeo full-width ratio */
+.media-block iframe {
+  aspect-ratio: 16 / 9;
+}
+Why this is better than Wix
+No weird padding/margins Wix forces
+Full control of how media scales
+You can mix:
+autoplay loops (installation feel)
+documentation clips
+stills
+Loads faster
+Looks more intentional
+What I still need from you
+
+To actually match your current site accurately, send one of these:
+
+A screenshot of the page
+OR describe:
+is it a grid?
+stacked videos?
+hover effects?
+text overlays?
+Also—important pushback
+
+Your work is about immersion, light, and spatial experience.
+A standard Wix “media gallery” undersells that.
+
+If you’re open to it, I’d recommend the next step being:
+
+scroll-based transitions
+fullscreen looping environments
+minimal UI (almost no “portfolio grid”)
+
+Something that feels closer to an installation than a website.
+
+If you send a screenshot, I’ll rebuild your exact page—but cleaner and more intentional.
+
+back-track. Im on the new project page of github. Where =do I go from there
+
+Good call—this is the part where GitHub’s UI is weirdly unintuitive the first time. I’ll walk you straight through it without fluff.
+
+Step 1 — Create the repository
+
+On the “New repository” page:
+
+Repository name → something like:
+
+nate-portfolio
+Make it Public (required for free GitHub Pages)
+✅ Check “Add a README file” (makes setup easier)
+
+Then click:
+👉 Create repository
+
+Step 2 — Add your website files
+
+Once the repo is created:
+
+Click “Add file” → “Create new file”
+Create your homepage:
+
+Name the file:
+
+index.html
+Paste the HTML code I gave you earlier
+Scroll down → click Commit changes
+Repeat:
+
+Click “Add file” → “Create new file”
+
+Create your CSS:
+
+File name:
+
+styles.css
+Paste the CSS code
+Commit
+Step 3 — Add media folder
+
+GitHub doesn’t have “folders” the normal way, so:
+
+Click “Add file” → “Upload files”
+Drag in:
+videos
+images
+
+OR create a folder by naming files like:
+
+media/project1.jpg
+media/video1.mp4
+
+GitHub will automatically create the media folder.
+
+Step 4 — Turn on your website
+
+Now the key step:
+
+Go to Settings (top of repo)
+Scroll to “Pages” (left sidebar)
+
+Under Build and deployment:
+
+Source → Deploy from branch
+Branch → main
+Folder → / (root)
+
+Click Save
+
+Step 5 — Get your live link
+
+After ~30–60 seconds, your site will be live at:
+
+https://YOUR-USERNAME.github.io/nate-portfolio/
+If something looks broken
+
+Common issues:
+
+Page is blank → file must be named index.html
+No styling → styles.css not linked or not committed
+Images not showing → wrong file path (media/...)
+What I’d do next (for you specifically)
+
+Once this is live, we should:
+
+rebuild your actual pages (Work / Media / About)
+design it around video-first viewing
+remove “portfolio grid” feel and make it more immersive
+
+If you want, send me a screenshot of your repo after Step 2 and I’ll catch anything before it breaks 👍
