@@ -1,61 +1,70 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Nate Britton</title>
-  <link rel="stylesheet" href="styles.css" />
-</head>
-<body>
+<body {
+  margin: 0;
+  background: black;
+  color: white;
+  font-family: Helvetica, Arial, sans-serif;
+}
 
-<header class="header">
-  <h1>NATE BRITTON</h1>
-  <nav>
-    <a href="#">PROJECTION DESIGN</a>
-    <a href="#">VIDEO INSTALLATION</a>
-    <a href="#">ABOUT</a>
-  </nav>
-</header>
+/* HEADER */
+.header {
+  text-align: center;
+  padding: 40px 20px 20px;
+}
 
-<!-- HERO IMAGE -->
-<section class="hero">
-  <img src="media/hero.jpg" alt="">
-</section>
+.header h1 {
+  font-size: 64px;
+  letter-spacing: 8px;
+  margin-bottom: 10px;
+}
 
-<!-- PROJECT GRID -->
-<section class="gallery">
+nav a {
+  margin: 0 20px;
+  text-decoration: none;
+  color: white;
+  font-size: 14px;
+  letter-spacing: 2px;
+}
 
-  <a href="projects/slouch-hat.html" class="project">
-    <img src="media/slouch.jpg">
-    <p>The City Wears a Slouch Hat</p>
-  </a>
+/* HERO */
+.hero img {
+  width: 100%;
+  max-height: 600px;
+  object-fit: cover;
+  display: block;
+}
 
-  <a href="projects/elsewhere.html" class="project">
-    <img src="media/elsewhere.jpg">
-    <p>The Elsewhere</p>
-  </a>
+/* GRID */
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 40px;
+  padding: 60px;
+}
 
-  <a href="projects/tears.html" class="project">
-    <img src="media/tears.jpg">
-    <p>The Tears I Shed</p>
-  </a>
+.project {
+  text-decoration: none;
+  color: white;
+  text-align: center;
+}
 
-  <a href="projects/twink.html" class="project">
-    <img src="media/twink.jpg">
-    <p>Twink Death</p>
-  </a>
+.project img {
+  width: 100%;
+  display: block;
+}
 
-  <a href="projects/wish.html" class="project">
-    <img src="media/wish.jpg">
-    <p>The Wish</p>
-  </a>
+.project p {
+  margin-top: 10px;
+  font-family: serif;
+  font-size: 18px;
+}
 
-  <a href="projects/road.html" class="project">
-    <img src="media/road.jpg">
-    <p>The Road</p>
-  </a>
+/* MOBILE */
+@media (max-width: 900px) {
+  .gallery {
+    grid-template-columns: 1fr;
+  }
 
-</section>
-
-</body>
-</html>
+  .header h1 {
+    font-size: 40px;
+  }
+}
