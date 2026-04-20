@@ -1,74 +1,61 @@
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: Helvetica, Arial, sans-serif;
-}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Nate Britton</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
 
-body {
-  background: #000;
-  color: #fff;
-}
+<header class="header">
+  <h1>NATE BRITTON</h1>
+  <nav>
+    <a href="#">PROJECTION DESIGN</a>
+    <a href="#">VIDEO INSTALLATION</a>
+    <a href="#">ABOUT</a>
+  </nav>
+</header>
 
-/* Header */
-header {
-  position: fixed;
-  width: 100%;
-  display: flex;
-  justify-content: space-between;
-  padding: 20px;
-  background: rgba(0,0,0,0.6);
-  backdrop-filter: blur(10px);
-  z-index: 10;
-}
+<!-- HERO IMAGE -->
+<section class="hero">
+  <img src="media/hero.jpg" alt="">
+</section>
 
-nav a {
-  margin-left: 20px;
-  text-decoration: none;
-  color: white;
-}
+<!-- PROJECT GRID -->
+<section class="gallery">
 
-/* Hero Video */
-.hero {
-  height: 100vh;
-  overflow: hidden;
-}
+  <a href="projects/slouch-hat.html" class="project">
+    <img src="media/slouch.jpg">
+    <p>The City Wears a Slouch Hat</p>
+  </a>
 
-.hero video {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
+  <a href="projects/elsewhere.html" class="project">
+    <img src="media/elsewhere.jpg">
+    <p>The Elsewhere</p>
+  </a>
 
-/* Work Section */
-.work {
-  padding: 100px 40px;
-}
+  <a href="projects/tears.html" class="project">
+    <img src="media/tears.jpg">
+    <p>The Tears I Shed</p>
+  </a>
 
-.grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 20px;
-}
+  <a href="projects/twink.html" class="project">
+    <img src="media/twink.jpg">
+    <p>Twink Death</p>
+  </a>
 
-.project img {
-  width: 100%;
-  display: block;
-}
+  <a href="projects/wish.html" class="project">
+    <img src="media/wish.jpg">
+    <p>The Wish</p>
+  </a>
 
-.project h3 {
-  margin-top: 10px;
-}
+  <a href="projects/road.html" class="project">
+    <img src="media/road.jpg">
+    <p>The Road</p>
+  </a>
 
-/* Sections */
-section {
-  padding: 80px 40px;
-}
+</section>
 
-/* Footer */
-footer {
-  text-align: center;
-  padding: 40px;
-  font-size: 14px;
-  opacity: 0.6;
-}
+</body>
+</html>
